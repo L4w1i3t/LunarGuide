@@ -5,11 +5,14 @@ This guide walks you through setting up the Lunar Tear private server for a spec
 ---
 
 ## Get Started
+<p align="center">
+  <img src="images/tears.jpg">
+</p>
 
-[Start Installation](installation.md)
+### [Start Installation](installation.md)
 
 ---
 
 ## Community
-
+### Discord
 Join the [Discord Server](https://discord.gg/qwxXvTqpqT) for help and resources.
