@@ -37,7 +37,7 @@ Install all of the following before starting (do remember to include them in you
 | **Python 3**                                      | https://python.org |
 | **Java (JDK)**                                    | https://adoptium.net |
 | **apktool**                                       | https://apktool.org |
-| **Android build tools** (`apksigner`, `zipalign`) | Install Android Studio → SDK Manager → SDK Tools → "Android SDK Build-Tools" |
+| **Android build tools** (`apksigner`, `zipalign`) | See [Android build tools](#android-build-tools)|
 | **protoc**                                        | https://github.com/protocolbuffers/protobuf/releases |
 | Make                                              | https://sourceforge.net/projects/gnuwin32/files/make/3.81/make-3.81.exe/download |
 | Terminal                                          | https://apps.microsoft.com/detail/9n0dx20hk701 |
