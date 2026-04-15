@@ -1,55 +1,66 @@
-# Android Build Tools
+## Android Build Tools
 
-These are tools necessary for APK patching (apksigner, zipalign)
+Necessary tools for APK patching (`apksigner`, `zipalign`)
 
-### Installation:
-Go to [Android Studio](https://developer.android.com/studio) website, scroll down to `Command line tools only` section.
+### Installation
 
-Download windows package.
-  ![](images/cmd_windows.png)
+1. Visit [Android Studio](https://developer.android.com/studio) and scroll down to the `Command line tools only` section.
 
-Extract downloaded zip. It will look like this:
+2. Download the **Windows Package**.
 
-```
-root/
-    cmdline-tools/
-        bin/   
-                sdkmanager.bat ← download tool
-        ...
-```
-Inside cmdline-tools, create a subfolder `latest` and move all of its contents to this subfoder.
+    ![](images/cmd_windows.png)
 
-```
-root/
-    cmdline-tools/
-        latest/
-            bin/   
-                sdkmanager.bat ← download tool
-```
+3. Extract the downloaded archive. The directory structure should look like this:
 
-Open your terminal in `bin/`
+        root/
+            cmdline-tools/
+                bin/
+                    sdkmanager.bat ← download tool
+            ...
 
-Run `sdkmanager.bat "build-tools;34.0.0"`
+4. Inside `cmdline-tools`, create a subfolder `latest`:
 
-If you have newer Java version installed like 21+/26, it can give you false alarm: `Java version 17 or higher is required`
+        root/
+            cmdline-tools/
+                latest/
+                    bin/
+                        sdkmanager.bat ← download tool
+                    ...
 
-In this case run `set SKIP_JDK_VERSION_CHECK=true` before running above command
+5. Open your terminal in `bin/`.
 
-Once run, it will prompt you term of condition, accept (y).
+6. Run the following command to install the required build tools:
 
-After download finished, apksigner and zipalign will be stored in `build-tools/34.0.0/`
+    ```bash
+    sdkmanager.bat "build-tools;34.0.0"
+    ```
 
-```
-root/
-    .temp/
-    cmdline-tools/
-        latest/
-            bin/   
-                sdkmanager.bat
-    build-tools/
-        34.0.0/
-            apksigner.bat
-            zipalign.exe
-    licenses/
-```
+7. If you are using a newer Java version (e.g., 21 or later), you may encounter the warning:
 
+    ```text
+    Java version 17 or higher is required
+    ```
+
+    To bypass the version check, run:
+
+    ```bash
+    set SKIP_JDK_VERSION_CHECK=true
+    ```
+
+    Then re-run the previous `sdkmanager` command.
+
+8. When prompted, accept the license agreement by entering `y`.
+
+9. After installation completes, `apksigner` and `zipalign` will be located in:
+   
+        root/
+            .temp/
+            cmdline-tools/
+                latest/
+                    bin/
+                        sdkmanager.bat
+            build-tools/
+                34.0.0/
+                    apksigner.bat
+                    zipalign.exe
+            licenses/
