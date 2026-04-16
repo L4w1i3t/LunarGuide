@@ -123,6 +123,7 @@ Rebuild the APK
 
 ```bash
 apktool b patched -o patched.apk
+zipalign -f -v 4 patched.apk patched_aligned.apk
 ```
 Generate a signing key (run one-time only)
  *Skip this if you already have debug.keystore.*
