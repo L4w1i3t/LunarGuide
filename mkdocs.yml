@@ -22,6 +22,7 @@ nav:
   - Known Issues: known-issues.md
   - Updating: updating.md
   - Tailscale Setup: tailscale-setup.md
+  - Video Resources: video.md
 
 plugins:
   - search
